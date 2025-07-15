@@ -1,8 +1,29 @@
 
 # Laravel Backend Dashboard
 
-This repository contains a minimal Laravel setup meant to be used with a React frontend. Authentication is handled on the frontend, and a session token is sent with every request. The backend only needs to verify this token and determine the logged-in user through middleware.
+> ⚠️ **Important Notice**  
+> This repository is a **template base for Laravel + React + Docker projects**.  
+> **Do not clone it directly (`git clone`)**. It is meant to serve as a clean starting point.
 
+✅ Instead, create your own repository based on this template:
+
+### ✔️ Using GitHub Web UI
+
+1️⃣ Click the green **“Use this template”** button at the top right.
+2️⃣ Create a new repository under your GitHub account.
+3️⃣ Then clone your newly created project:
+
+```bash
+git clone https://github.com/your-username/your-new-project.git
+```
+
+## 🧪 Using GitHub CLI
+### If you have the GitHub CLI installed:
+
+```bash
+gh repo create my-project --template your-username/this-template-repo --private
+git clone https://github.com/your-username/my-project.git
+```
 ---
 
 ## 🧰 Tech Stack
