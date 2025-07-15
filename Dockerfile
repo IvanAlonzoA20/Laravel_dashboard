@@ -31,12 +31,12 @@ WORKDIR /var/www
 
 COPY . .
 
-RUN composer install --no-dev --no-interaction --prefer-dist
-RUN npm install
-
 RUN mkdir -p storage/logs bootstrap/cache \
     && chown -R www-data:www-data storage bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
+
+RUN composer install --no-dev --no-interaction --prefer-dist
+RUN npm install
 
 RUN npm run build
 

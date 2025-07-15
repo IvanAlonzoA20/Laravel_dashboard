@@ -152,15 +152,22 @@ Use the following login credentials (from your `.env`):
 
 ➡️ Ensure that the database specified in `.env` exists (`DB_DATABASE`), or create it via phpMyAdmin before running migrations.
 
-### 5️⃣ Run database migrations
+### 5️⃣ Run database migrations and generate Laravel app key
 
-Once your containers are running and the database exists, execute:
+Once your containers are running and the database exists, run:
 
 ```bash
 docker-compose exec app php artisan migrate
+docker-compose exec app php artisan key:generate
+```
+### 6️⃣ Build frontend assets (Vite)
+
+```bash
+docker-compose exec app npm run build
 ```
 
-### 6️⃣ Optional: Manual Docker build
+
+### 7️⃣ Optional: Manual Docker build
 
 If you'd like to build the image manually without Compose:
 
